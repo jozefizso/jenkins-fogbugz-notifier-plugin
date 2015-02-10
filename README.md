@@ -1,6 +1,7 @@
 # fogbugz-notifier-plugin for Jenkins
 
 [![Travis](https://img.shields.io/travis/jozefizso/jenkins-fogbugz-notifier-plugin.svg)](https://travis-ci.org/jozefizso/jenkins-fogbugz-notifier-plugin)
+[![Coverage Status](https://coveralls.io/repos/jozefizso/jenkins-fogbugz-notifier-plugin/badge.svg?branch=master)](https://coveralls.io/r/jozefizso/jenkins-fogbugz-notifier-plugin?branch=master)
 
 A Jenkins plugin to integrate Fogbugz and Jenkins.
 Supports the following operations:

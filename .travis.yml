@@ -5,6 +5,16 @@ jdk:
   - oraclejdk7
   - openjdk7
 
+scripts:
+  - mvn test
+
+after_success:
+  - mvn clean cobertura:cobertura coveralls:report
+
 cache:
   directories:
     - $HOME/.m2
+
+env:
+  global:
+    secure: eJBZ7mtTDAGk0UoLHVFqyGl2Wx9zmxzNUiS9eHtEh+twJ2IZdwpIx4hqeIPlPD0D+R5DGdFRFvj2h4YkB/dTgKJ4w8axOxqpVrSTeasekLrBuxtiOkqT/L0OiywSIptiNg5qUglTDvkwONtW2UwfZAP6/gSsI4Y+RLiCUTgf4Y8=
