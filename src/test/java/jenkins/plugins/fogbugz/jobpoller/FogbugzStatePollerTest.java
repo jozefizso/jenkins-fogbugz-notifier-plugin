@@ -5,6 +5,7 @@ import hudson.model.*;
 import jenkins.plugins.fogbugz.jobtrigger.FogbugzEventListener;
 import jenkins.plugins.fogbugz.notifications.FogbugzNotifier;
 import lombok.extern.java.Log;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,6 +28,7 @@ import static org.mockito.Matchers.anyString;
 
 @Log
 @RunWith(MockitoJUnitRunner.class)
+@Ignore("Badly designed test that is unreliable")
 public class FogbugzStatePollerTest {
 
     @Rule

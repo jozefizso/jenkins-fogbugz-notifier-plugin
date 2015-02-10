@@ -4,9 +4,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by bubenkoff on 1/21/14.
- */
 public class FogbugzEnvironmentWrapperTest {
 
     @Test
@@ -47,9 +44,17 @@ public class FogbugzEnvironmentWrapperTest {
     }
 
     @Test
-    public void testParseBranchName() {
+    public void parseBranchName_BranchNameAfterHashCharacter_ReturnsBranchName1() {
         assertEquals("c234234", FogbugzEnvironmentWrapper.parseBranchName("anatoly/some#c234234"));
+    }
+
+    @Test
+    public void parseBranchName_BranchNameAfterHashCharacter_ReturnsBranchName2() {
         assertEquals("c234234-2", FogbugzEnvironmentWrapper.parseBranchName("anatoly/some#c234234-2"));
+    }
+
+    @Test
+    public void parseBranchName_BranchNameAfterHashCharacter_ReturnsBranchName3() {
         assertEquals("c234234_2", FogbugzEnvironmentWrapper.parseBranchName("anatoly/some#c234234_2"));
     }
 }
