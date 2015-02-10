@@ -41,6 +41,11 @@
             <name>Dirk Zittersteyn</name>
             <email>zittersteyn@gmail.com</email>
         </developer>
+        <developer>
+            <id>jozefizso</id>
+            <name>Jozef Izso</name>
+            <email>jozef.izso@gmail.com</email>
+        </developer>
     </developers>
 
     <properties>
@@ -118,5 +123,3 @@
         </plugins>
     </build>
 </project>
-
-
