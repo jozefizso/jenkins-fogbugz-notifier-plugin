@@ -9,16 +9,16 @@
     <artifactId>fogbugz-notifier</artifactId>
     <packaging>hpi</packaging>
     <version>2.2.8-SNAPSHOT</version>
-    <name>Fogbugz plugin</name>
-    <description>Fogbugz integration for Jenkins</description>
-    <url>http://wiki.jenkins-ci.org/display/JENKINS/Fogbugz+Plugin</url>
+    <name>FogbBugz Notifier plugin</name>
+    <description>FogBugz notifications plugin for Jenkins</description>
+    <url>https://wiki.jenkins-ci.org/display/JENKINS/Fogbugz+Notifier+Plugin</url>
 
     <scm>
-        <connection>scm:git:ssh://github.com/jenkinsci/fogbugz-plugin.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/jenkinsci/fogbugz-plugin.git</developerConnection>
-        <url>https://github.com/jenkinsci/fogbugz-plugin</url>
-    <tag>fogbugz-2.2.0</tag>
-  </scm>
+        <connection>scm:git:ssh://github.com:jozefizso/jenkins-fogbugz-notifier-plugin.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:jozefizso/jenkins-fogbugz-notifier-plugin.git</developerConnection>
+        <url>https://github.com/jozefizso/jenkins-fogbugz-notifier-plugin</url>
+        <tag>fogbugz-2.2.0</tag>
+    </scm>
 
     <developers>
         <developer>
