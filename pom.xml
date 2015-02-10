@@ -6,7 +6,7 @@
         <version>1.577</version>
     </parent>
 
-    <artifactId>fogbugz</artifactId>
+    <artifactId>fogbugz-notifier</artifactId>
     <packaging>hpi</packaging>
     <version>2.2.8-SNAPSHOT</version>
     <name>Fogbugz plugin</name>
