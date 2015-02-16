@@ -16,12 +16,17 @@ import java.util.regex.PatternSyntaxException;
 public class FogbugzChangelogAnnotator extends ChangeLogAnnotator {
     private final Logger logger = Logger.getLogger(getClass().getName());
 
-    private static final String VIEW_CASE_URL = "/default.asp?";
+    private static final String VIEW_CASE_URL = "default.asp?";
 
     @Override
     public void annotate(AbstractBuild<?, ?> build, Entry change, MarkupText text) {
+        FogbugzProjectProperty.DescriptorImpl descriptor = FogbugzProjectProperty.DESCRIPTOR;
+
+        this.annotate(descriptor.getRegex(), descriptor.getUrl(), text);
+    }
+
+    public void annotate(String regex, String url, MarkupText text) {
         Pattern pattern = null;
-        String regex = FogbugzProjectProperty.DESCRIPTOR.getRegex();
         try {
             pattern = Pattern.compile(regex);
         } catch (PatternSyntaxException e) {
@@ -32,9 +37,9 @@ public class FogbugzChangelogAnnotator extends ChangeLogAnnotator {
         for (SubText token : text.findTokens(pattern)) {
             try {
                 Integer key = getId(token);
-                token.surroundWith(
-                        String.format("<a href='%s%s%d'>", FogbugzProjectProperty.DESCRIPTOR.getUrl(), VIEW_CASE_URL,
-                                key), "</a>");
+                String startTag = String.format("<a href=\"%s%s%d\">", url, VIEW_CASE_URL, key);
+
+                token.surroundWith(startTag, "</a>");
             } catch (Exception e) {
                 continue;
             }
